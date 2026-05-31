@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOX 0.0 Estética Automotiva | Vila Natal, Zona Sul — São Paulo</title>
+<meta name="description" content="Estética automotiva premium na Vila Natal, Zona Sul de São Paulo. Lavagem, polimento, higienização, revitalização de faróis. Não é lavagem. É transformação.">
+<meta name="keywords" content="estética automotiva zona sul, lavagem carro vila natal, polimento automotivo SP, higienização carro grajaú, detailing zona sul são paulo">
+<meta property="og:title" content="BOX 0.0 Estética Automotiva">
+<meta property="og:description" content="Não é lavagem. É transformação. Vila Natal, Zona Sul — SP">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --preto:#0a0a0a;
+  --preto2:#111;
+  --preto3:#1a1a1a;
+  --verde:#c8ff00;
+  --verde2:#8dc63f;
+  --branco:#ffffff;
+  --texto:#f0f0f0;
+  --texto2:#888;
+  --borda:#222;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--preto);color:var(--texto);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--borda);padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:var(--verde);text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--texto2);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--verde)}
+.nav-cta{background:var(--verde);color:#111;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;font-family:'Syne',sans-serif;transition:all .2s;white-space:nowrap}
+.nav-cta:hover{background:#d4ff33;transform:translateY(-1px)}
+.nav-menu{display:none;background:none;border:none;cursor:pointer;color:var(--texto);font-size:22px}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px 2rem 4rem}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0a0a0a 0%,#111 40%,#0d1a00 100%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,255,0,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,255,0,.03) 1px,transparent 1px);background-size:60px 60px}
+.hero-glow{position:absolute;top:20%;right:10%;width:400px;height:400px;background:radial-gradient(circle,rgba(200,255,0,.08) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;max-width:700px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,255,0,.1);border:1px solid rgba(200,255,0,.2);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:var(--verde);margin-bottom:1.5rem;letter-spacing:.5px}
+.hero-badge::before{content:'●';font-size:8px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-titulo{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05;margin-bottom:1rem;letter-spacing:-1px}
+.hero-titulo span{color:var(--verde)}
+.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--texto2);margin-bottom:.5rem;line-height:1.6}
+.hero-slogan{font-family:'Syne',sans-serif;font-size:clamp(.9rem,1.5vw,1rem);color:#555;margin-bottom:2.5rem;letter-spacing:1px;text-transform:uppercase}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-whats{display:inline-flex;align-items:center;gap:10px;background:var(--verde);color:#111;padding:14px 28px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;text-decoration:none;transition:all .2s}
+.btn-whats:hover{background:#d4ff33;transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,255,0,.3)}
+.btn-whats svg{width:20px;height:20px}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--borda);color:var(--texto2);padding:14px 28px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s}
+.btn-outline:hover{border-color:var(--verde);color:var(--verde)}
+.hero-stats{display:flex;gap:3rem;justify-content:center;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--borda)}
+.stat-item{text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;color:var(--verde);display:block}
+.stat-lbl{font-size:12px;color:#555;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+
+/* SECTIONS */
+section{padding:5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-badge{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--verde);margin-bottom:.75rem}
+.section-titulo{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:1rem}
+.section-desc{font-size:15px;color:var(--texto2);line-height:1.7;max-width:560px}
+
+/* DIFERENCIAIS */
+.diferenciais{background:var(--preto2);border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+.dif-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:3rem}
+.dif-card{background:var(--preto3);border:1px solid var(--borda);border-radius:12px;padding:1.5rem;transition:all .2s}
+.dif-card:hover{border-color:rgba(200,255,0,.3);transform:translateY(-4px)}
+.dif-icon{font-size:2rem;margin-bottom:1rem;display:block}
+.dif-titulo{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:var(--texto);margin-bottom:.5rem}
+.dif-desc{font-size:13px;color:var(--texto2);line-height:1.6}
+
+/* SERVIÇOS */
+.servicos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3rem}
+.servico-card{background:var(--preto2);border:1px solid var(--borda);border-radius:12px;padding:1.5rem;transition:all .2s;position:relative;overflow:hidden}
+.servico-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--verde);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.servico-card:hover{border-color:rgba(200,255,0,.2);transform:translateY(-4px)}
+.servico-card:hover::before{transform:scaleX(1)}
+.servico-icon{font-size:2rem;margin-bottom:1rem;display:block}
+.servico-nome{font-family:'Syne',sans-serif;font-weight:700;font-size:17px;color:var(--texto);margin-bottom:.5rem}
+.servico-desc{font-size:13px;color:var(--texto2);line-height:1.6;margin-bottom:1rem}
+.servico-preco{font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:var(--verde);margin-bottom:1rem}
+.servico-btn{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--borda);color:var(--texto2);padding:8px 16px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;transition:all .2s;cursor:pointer}
+.servico-btn:hover{background:var(--verde);color:#111;border-color:var(--verde)}
+
+/* PROCESSO */
+.processo{background:var(--preto2);border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+.processo-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-top:3rem;position:relative}
+.step{text-align:center;position:relative}
+.step-num{width:48px;height:48px;background:var(--verde);color:#111;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:18px;margin:0 auto 1rem}
+.step-titulo{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:.5rem}
+.step-desc{font-size:13px;color:var(--texto2);line-height:1.6}
+
+/* GALERIA */
+.galeria-wrap{margin-top:3rem}
+.galeria-instagram{background:var(--preto2);border:1px solid var(--borda);border-radius:12px;padding:2rem;text-align:center}
+.galeria-instagram p{color:var(--texto2);font-size:14px;margin-bottom:1.5rem}
+.instagram-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;border-radius:8px;overflow:hidden}
+.insta-placeholder{aspect-ratio:1;background:var(--preto3);display:flex;align-items:center;justify-content:center;font-size:2rem;border:1px solid var(--borda)}
+.galeria-cta{margin-top:1.5rem}
+.btn-instagram{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:12px 24px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:700;font-size:14px;text-decoration:none;transition:all .2s}
+.btn-instagram:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(220,39,67,.3)}
+
+/* DEPOIMENTOS */
+.depoimentos{background:var(--preto2);border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+.dep-card{background:var(--preto3);border:1px solid var(--borda);border-radius:12px;padding:1.5rem}
+.dep-stars{color:var(--verde);font-size:14px;margin-bottom:.75rem;letter-spacing:2px}
+.dep-texto{font-size:14px;color:var(--texto);line-height:1.7;margin-bottom:1rem;font-style:italic}
+.dep-autor{font-size:12px;color:var(--texto2);font-weight:600}
+.dep-google{font-size:11px;color:#555;margin-top:2px}
+
+/* FAQ */
+.faq-lista{margin-top:3rem;max-width:700px}
+.faq-item{border-bottom:1px solid var(--borda);overflow:hidden}
+.faq-pergunta{width:100%;background:none;border:none;color:var(--texto);padding:1.25rem 0;font-size:15px;font-weight:600;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif;transition:color .2s}
+.faq-pergunta:hover{color:var(--verde)}
+.faq-pergunta.ativo{color:var(--verde)}
+.faq-icon{font-size:18px;transition:transform .3s;flex-shrink:0;margin-left:1rem}
+.faq-pergunta.ativo .faq-icon{transform:rotate(45deg)}
+.faq-resposta{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-resposta.aberta{max-height:200px}
+.faq-resposta p{padding:0 0 1.25rem;font-size:14px;color:var(--texto2);line-height:1.7}
+
+/* CTA FINAL */
+.cta-final{text-align:center;background:linear-gradient(135deg,#0a0a0a,#0d1a00)}
+.cta-final .section-titulo{font-size:clamp(2rem,5vw,3.5rem)}
+.cta-final .section-titulo span{color:var(--verde)}
+.cta-desc{font-size:16px;color:var(--texto2);margin:1rem auto 2.5rem;max-width:500px;line-height:1.7}
+.cta-info{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.cta-info-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--texto2)}
+.cta-info-item span{color:var(--verde);font-size:16px}
+
+/* FOOTER */
+footer{background:var(--preto2);border-top:1px solid var(--borda);padding:3rem 2rem}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--verde);margin-bottom:.5rem}
+.footer-slogan{font-size:12px;color:#555;margin-bottom:1rem}
+.footer-titulo{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--texto);margin-bottom:1rem;text-transform:uppercase;letter-spacing:.5px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.footer-links a{color:var(--texto2);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--verde)}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--borda);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:12px;color:#555}
+
+/* WHATSAPP FLOAT */
+.whats-float{position:fixed;bottom:2rem;right:2rem;z-index:200;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .2s;animation:float 3s ease-in-out infinite}
+.whats-float:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,.5)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.whats-float svg{width:28px;height:28px}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-menu{display:block}
+  .hero-stats{gap:1.5rem}
+  .stat-num{font-size:1.5rem}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-info{gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">BOX 0.0</a>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="https://wa.me/5511946137665?text=Olá!%20Quero%20agendar%20um%20serviço%20no%20BOX%200.0!%20🚗" class="nav-cta" target="_blank">Agendar agora</a>
+  <button class="nav-menu" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">📍 Vila Natal • Zona Sul, São Paulo</div>
+    <h1 class="hero-titulo">
+      Não é lavagem.<br><span>É transformação.</span>
+    </h1>
+    <p class="hero-sub">Estética automotiva premium com produtos profissionais e técnicas avançadas.</p>
+    <p class="hero-slogan">Resultado ou Nada • Padrão de Qualidade</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5511946137665?text=Olá!%20Quero%20agendar%20um%20serviço%20no%20BOX%200.0!%20🚗" class="btn-whats" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a href="#servicos" class="btn-outline">Ver serviços →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-lbl">Satisfação</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">Sáb/Dom</span>
+        <span class="stat-lbl">Atendimento</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">Premium</span>
+        <span class="stat-lbl">Produtos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="diferenciais">
+  <div class="container">
+    <div class="section-badge">Por que o BOX 0.0</div>
+    <h2 class="section-titulo">Não é pra qualquer carro.<br>É pra quem aprecia o melhor.</h2>
+    <div class="dif-grid">
+      <div class="dif-card">
+        <span class="dif-icon">🏆</span>
+        <div class="dif-titulo">Produtos Premium</div>
+        <div class="dif-desc">Utilizamos apenas produtos profissionais de alta performance para garantir o melhor resultado em cada atendimento.</div>
+      </div>
+      <div class="dif-card">
+        <span class="dif-icon">🎯</span>
+        <div class="dif-titulo">Atendimento Personalizado</div>
+        <div class="dif-desc">Cada carro recebe atenção exclusiva. Avaliamos as necessidades específicas do seu veículo antes de começar.</div>
+      </div>
+      <div class="dif-card">
+        <span class="dif-icon">📅</span>
+        <div class="dif-titulo">Horário Agendado</div>
+        <div class="dif-desc">Atendemos sábados e domingos com hora marcada. Seu tempo é respeitado — sem espera, sem surpresa.</div>
+      </div>
+      <div class="dif-card">
+        <span class="dif-icon">✨</span>
+        <div class="dif-titulo">Resultado Garantido</div>
+        <div class="dif-desc">Resultado ou nada. Entregamos o aspecto de zero km no seu veículo ou não ficamos satisfeitos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="container">
+    <div class="section-badge">O que fazemos</div>
+    <h2 class="section-titulo">Serviços que transformam</h2>
+    <p class="section-desc">Do essencial ao detalhamento completo — cada serviço executado com o mesmo padrão de qualidade.</p>
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <span class="servico-icon">🚿</span>
+        <div class="servico-nome">Lavagem Start</div>
+        <div class="servico-desc">O essencial seguro — aspiração, lavagem com pH neutro, secagem técnica anti-riscos e pretinho premium.</div>
+        <div class="servico-preco">A partir de R$ 60</div>
+        <a href="https://wa.me/5511946137665?text=Olá!%20Tenho%20interesse%20na%20Lavagem%20Start.%20Pode%20me%20passar%20mais%20informações?" class="servico-btn" target="_blank">Agendar →</a>
+      </div>
+      <div class="servico-card">
+        <span class="servico-icon">💎</span>
+        <div class="servico-nome">Lavagem Performance</div>
+        <div class="servico-desc">O equilíbrio e brilho — tudo da Start mais limpeza química de rodas e proteção UV dos plásticos.</div>
+        <div class="servico-preco">A partir de R$ 110</div>
+        <a href="https://wa.me/5511946137665?text=Olá!%20Tenho%20interesse%20na%20Lavagem%20Performance.%20Pode%20me%20passar%20mais%20informações?" class="servico-btn" target="_blank">Agendar →</a>
+      </div>
+      <div class="servico-card">
+        <span class="servico-icon">🔥</span>
+        <div class="servico-nome">Lavagem Resgate</div>
+        <div class="servico-desc">O detalhamento de elite — cirúrgico em cada detalhe, emblemas, frisos e cera de alta repelência.</div>
+        <div class="servico-preco">A partir de R$ 220</div>
+        <a href="https://wa.me/5511946137665?text=Olá!%20Tenho%20interesse%20na%20Lavagem%20Resgate.%20Pode%20me%20passar%20mais%20informações?" class="servico-btn" target="_blank">Agendar →</a>
+      </div>
+      <div class="servico-card">
+        <span class="servico-icon">🧹</span>
+        <div class="servico-nome">Higienização Completa</div>
+        <div class="servico-desc">A vapor com extratora — elimina 99% de ácaros, fungos e bactérias. Saúde e proteção para sua família.</div>
+        <div class="servico-preco">A partir de R$ 200</div>
+        <a href="https://wa.me/5511946137665?text=Olá!%20Tenho%20interesse%20na%20Higienização%20Completa.%20Pode%20me%20passar%20mais%20informações?" class="servico-btn" target="_blank">Agendar →</a>
+      </div>
+      <div class="servico-card">
+        <span class="servico-icon">✨</span>
+        <div class="servico-nome">Polimento Profissional</div>
+        <div class="servico-desc">Remove micro riscos, devolve profundidade da cor e brilho espelhado. Aspecto de zero km real.</div>
+        <div class="servico-preco">A partir de R$ 420</div>
+        <a href="https://wa.me/5511946137665?text=Olá!%20Tenho%20interesse%20no%20Polimento%20Profissional.%20Pode%20me%20passar%20mais%20informações?" class="servico-btn" target="_blank">Agendar →</a>
+      </div>
+      <div class="servico-card">
+        <span class="servico-icon">🔦</span>
+        <div class="servico-nome">Revitalização de Faróis</div>
+        <div class="servico-desc">Mais luz, mais segurança. Recupera brilho e transparência total dos faróis — resultado visível na hora.</div>
+        <div class="servico-preco">R$ 150</div>
+        <a href="https://wa.me/5511946137665?text=Olá!%20Tenho%20interesse%20na%20Revitalização%20de%20Faróis.%20Pode%20me%20passar%20mais%20informações?" class="servico-btn" target="_blank">Agendar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="processo">
+  <div class="container">
+    <div class="section-badge">Como funciona</div>
+    <h2 class="section-titulo">Simples do início ao fim</h2>
+    <div class="processo-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-titulo">Fale no WhatsApp</div>
+        <div class="step-desc">Manda mensagem, descrevemos seu veículo e agendamos o melhor horário para você.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-titulo">Avaliação gratuita</div>
+        <div class="step-desc">Avaliamos as necessidades do seu carro e indicamos o serviço ideal para o resultado que você quer.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-titulo">Transformação</div>
+        <div class="step-desc">Executamos o serviço com produtos premium e técnicas profissionais. Você acompanha o processo.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-titulo">Entrega impecável</div>
+        <div class="step-desc">Seu carro devolvido com aspecto de zero km. Resultado ou nada — essa é a nossa garantia.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="container">
+    <div class="section-badge">Nossos trabalhos</div>
+    <h2 class="section-titulo">Resultados que falam</h2>
+    <p class="section-desc">Cada foto é um antes e depois real. Sem filtro, sem edição — só resultado.</p>
+    <div class="galeria-wrap">
+      <div class="galeria-instagram">
+        <p>📸 Acompanhe nossos trabalhos em tempo real no Instagram</p>
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/box0.0_/"
+          data-instgrm-version="14"
+          style="background:#111;border:1px solid #222;border-radius:12px;max-width:540px;min-width:326px;padding:0;width:99.375%;margin:0 auto">
+        </blockquote>
+        <script async src="//www.instagram.com/embed.js"></script>
+        <div class="galeria-cta" style="margin-top:1.5rem">
+          <a href="https://instagram.com/box0.0_" class="btn-instagram" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Ver todos os trabalhos no @box0.0_
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos">
+  <div class="container">
+    <div class="section-badge">O que dizem</div>
+    <h2 class="section-titulo">Clientes reais.<br>Resultados reais.</h2>
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <div class="dep-texto">"Meu carro ficou como zero km. O Caio é muito caprichoso, usa produtos de qualidade e entrega um resultado impressionante. Recomendo demais!"</div>
+        <div class="dep-autor">Cliente BOX 0.0</div>
+        <div class="dep-google">⭐ Avaliação Google</div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <div class="dep-texto">"Fiz a higienização completa e ficou incrível. Interior limpinho, sem cheiro, os bancos pareciam novos. Atendimento super profissional!"</div>
+        <div class="dep-autor">Cliente BOX 0.0</div>
+        <div class="dep-google">⭐ Avaliação Google</div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <div class="dep-texto">"Revitalizei os faróis que estavam super amarelados. Resultado na hora, muito melhor a visibilidade. Preço justo e serviço impecável!"</div>
+        <div class="dep-autor">Cliente BOX 0.0</div>
+        <div class="dep-google">⭐ Avaliação Google</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="https://wa.me/5511946137665?text=Olá!%20Quero%20agendar%20um%20serviço%20no%20BOX%200.0!%20🚗" class="btn-whats" target="_blank" style="display:inline-flex">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quero meu carro assim também
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-badge">Dúvidas frequentes</div>
+    <h2 class="section-titulo">Perguntas que todo<br>dono de carro faz</h2>
+    <div class="faq-lista">
+      <div class="faq-item">
+        <button class="faq-pergunta" onclick="toggleFaq(this)">
+          Onde vocês atendem? <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-resposta">
+          <p>Atendemos na Vila Natal e região — Grajaú, Parelheiros, Cidade Dutra, Interlagos e Zona Sul de São Paulo. O atendimento é feito com hora marcada, sábados e domingos.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta" onclick="toggleFaq(this)">
+          Qual a diferença entre as lavagens? <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-resposta">
+          <p>A Lavagem Start é o essencial — limpeza completa com produtos de qualidade. A Performance adiciona limpeza química de rodas e proteção UV. O Resgate é o detalhamento de elite, cirúrgico em cada detalhe, ideal para carros muito sujos ou que precisam de uma transformação completa.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta" onclick="toggleFaq(this)">
+          A lavagem risca a pintura? <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-resposta">
+          <p>Não. Usamos técnica de secagem anti-riscos e produtos com pH neutro que preservam a pintura. Nossa lavagem é segura e protege o acabamento do seu veículo.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta" onclick="toggleFaq(this)">
+          Quanto tempo leva cada serviço? <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-resposta">
+          <p>Lavagem Start: 1h30. Lavagem Performance: 2h. Lavagem Resgate: 3-4h. Higienização: 3-4h. Polimento: 6-8h. Revitalização de faróis: 1h. Os tempos podem variar conforme o estado do veículo.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta" onclick="toggleFaq(this)">
+          Como faço para agendar? <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-resposta">
+          <p>Pelo WhatsApp! Clica no botão de agendamento, manda uma mensagem e combinamos o melhor horário. Atendemos sábados e domingos com vagas limitadas — quanto antes você agendar, melhor.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta" onclick="toggleFaq(this)">
+          Quais formas de pagamento? <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-resposta">
+          <p>Aceitamos PIX, cartão de débito e crédito. O pagamento é realizado após a entrega do veículo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contato">
+  <div class="container" style="text-align:center">
+    <div class="section-badge" style="justify-content:center;display:flex">Pronto para transformar?</div>
+    <h2 class="section-titulo">Seu carro merece<br><span>o melhor acabamento.</span></h2>
+    <p class="cta-desc">Agende agora pelo WhatsApp. Vagas limitadas para sábado e domingo na Vila Natal — Zona Sul, SP.</p>
+    <a href="https://wa.me/5511946137665?text=Olá!%20Quero%20agendar%20um%20serviço%20no%20BOX%200.0!%20🚗" class="btn-whats" target="_blank" style="display:inline-flex;font-size:16px;padding:16px 32px">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agendar pelo WhatsApp agora
+    </a>
+    <div class="cta-info">
+      <div class="cta-info-item"><span>📅</span> Sábados e domingos</div>
+      <div class="cta-info-item"><span>📍</span> Vila Natal, Zona Sul — SP</div>
+      <div class="cta-info-item"><span>⚡</span> Vagas limitadas</div>
+      <div class="cta-info-item"><span>💳</span> PIX, débito e crédito</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">BOX 0.0</div>
+      <div class="footer-slogan">Não é lavagem. É transformação.</div>
+      <p style="font-size:13px;color:#555;line-height:1.6">Estética automotiva premium na Vila Natal, Zona Sul de São Paulo. Padrão de qualidade em cada atendimento.</p>
+    </div>
+    <div>
+      <div class="footer-titulo">Serviços</div>
+      <ul class="footer-links">
+        <li><a href="#servicos">Lavagem Start</a></li>
+        <li><a href="#servicos">Lavagem Performance</a></li>
+        <li><a href="#servicos">Lavagem Resgate</a></li>
+        <li><a href="#servicos">Higienização Completa</a></li>
+        <li><a href="#servicos">Polimento Profissional</a></li>
+        <li><a href="#servicos">Revitalização de Faróis</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-titulo">Contato</div>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/5511946137665" target="_blank">📱 WhatsApp</a></li>
+        <li><a href="https://instagram.com/box0.0_" target="_blank">📸 @box0.0_</a></li>
+        <li><a href="#faq">❓ Dúvidas frequentes</a></li>
+      </ul>
+      <div style="margin-top:1rem;font-size:12px;color:#555">
+        📍 Vila Natal, Zona Sul<br>São Paulo — SP<br><br>
+        ⏰ Sáb e Dom com hora marcada
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 BOX 0.0 Estética Automotiva. Vila Natal, Zona Sul — São Paulo.</div>
+    <div class="footer-copy">Resultado ou Nada.</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5511946137665?text=Olá!%20Quero%20agendar%20um%20serviço%20no%20BOX%200.0!%20🚗" class="whats-float" target="_blank" title="Agendar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+function toggleMenu(){
+  const links=document.querySelector('.nav-links');
+  if(links.style.display==='flex'&&links.style.flexDirection==='column'){
+    links.style.display='none';
+  } else {
+    links.style.display='flex';
+    links.style.flexDirection='column';
+    links.style.position='absolute';
+    links.style.top='60px';
+    links.style.left='0';
+    links.style.right='0';
+    links.style.background='#111';
+    links.style.padding='1rem 2rem';
+    links.style.borderBottom='1px solid #222';
+    links.style.gap='1rem';
+  }
+}
+
+function toggleFaq(btn){
+  const resposta=btn.nextElementSibling;
+  const isAberta=resposta.classList.contains('aberta');
+  document.querySelectorAll('.faq-resposta').forEach(r=>r.classList.remove('aberta'));
+  document.querySelectorAll('.faq-pergunta').forEach(b=>b.classList.remove('ativo'));
+  if(!isAberta){resposta.classList.add('aberta');btn.classList.add('ativo');}
+}
+
+// Scroll suave robusto para todos os links internos
+document.addEventListener('click', function(e){
+  const a = e.target.closest('a[href^="#"]');
+  if(!a) return;
+  const href = a.getAttribute('href');
+  if(href === '#') return;
+  const target = document.querySelector(href);
+  if(target){
+    e.preventDefault();
+    const nav = document.querySelector('.nav-links');
+    if(nav && nav.style.flexDirection==='column') nav.style.display='none';
+    const offset = 70;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({top, behavior:'smooth'});
+  }
+});
+
+// Animação de entrada nos cards
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.opacity='1';
+      e.target.style.transform='translateY(0)';
+    }
+  });
+},{threshold:0.1});
+
+document.querySelectorAll('.dif-card,.servico-card,.dep-card,.step').forEach(el=>{
+  el.style.opacity='0';
+  el.style.transform='translateY(20px)';
+  el.style.transition='opacity .5s ease, transform .5s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
