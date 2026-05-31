@@ -46,7 +46,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.95
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,255,0,.1);border:1px solid rgba(200,255,0,.2);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:var(--verde);margin-bottom:1.5rem;letter-spacing:.5px}
 .hero-badge::before{content:'●';font-size:8px;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero-titulo{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.4rem,5.5vw,4.5rem);line-height:1.1;margin-bottom:1rem;letter-spacing:-.5px;word-break:break-word;overflow-wrap:break-word;width:100%}
+.hero-titulo{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.4rem,5.5vw,4.5rem);line-height:1.15;margin-bottom:1rem;letter-spacing:-.3px}
+.hero-titulo span{color:var(--verde);display:block;font-size:clamp(1.4rem,5.5vw,4.5rem)}
 .hero-titulo span{color:var(--verde)}
 .hero-sub{font-size:clamp(.875rem,2vw,1.2rem);color:var(--texto2);margin-bottom:.5rem;line-height:1.6;width:100%}
 .hero-slogan{font-family:'Syne',sans-serif;font-size:clamp(.7rem,1.5vw,1rem);color:#555;margin-bottom:2.5rem;letter-spacing:1px;text-transform:uppercase;width:100%}
@@ -163,17 +164,18 @@ footer{background:var(--preto2);border-top:1px solid var(--borda);padding:3rem 2
   nav{padding:0 1rem}
   .hero{padding:80px 1.25rem 3rem;overflow:hidden}
   .hero-content{width:100%;padding:0}
-  .hero-titulo{font-size:1.9rem;letter-spacing:-.3px;word-break:break-word;overflow-wrap:break-word}
+  .hero-titulo{font-size:1.55rem !important;letter-spacing:0}
+  .hero-titulo span{font-size:1.55rem !important}
   .hero-sub{font-size:.9rem}
-  .hero-slogan{font-size:.75rem;letter-spacing:.5px}
+  .hero-slogan{font-size:.72rem;letter-spacing:.5px}
   .hero-btns{flex-direction:column;align-items:stretch}
   .btn-whats,.btn-outline{justify-content:center;text-align:center;width:100%}
-  .hero-stats{gap:.75rem;padding-top:1.5rem;margin-top:2rem;flex-wrap:wrap}
-  .stat-item{flex:1;min-width:80px}
-  .stat-num{font-size:1.1rem}
-  .stat-lbl{font-size:9px}
+  .hero-stats{gap:.5rem;padding-top:1.5rem;margin-top:2rem}
+  .stat-item{flex:1;min-width:0}
+  .stat-num{font-size:1rem !important;white-space:nowrap}
+  .stat-lbl{font-size:8px}
   section{padding:3rem 1.25rem}
-  .section-titulo{font-size:1.6rem;overflow-wrap:break-word}
+  .section-titulo{font-size:1.6rem}
   .dif-grid{grid-template-columns:1fr 1fr;gap:1rem}
   .servicos-grid{grid-template-columns:1fr}
   .processo-steps{grid-template-columns:1fr 1fr;gap:1.5rem}
