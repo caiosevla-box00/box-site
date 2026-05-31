@@ -38,28 +38,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,.95
 .nav-menu{display:none;background:none;border:none;cursor:pointer;color:var(--texto);font-size:22px}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px 2rem 4rem}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px 1.5rem 4rem}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0a0a0a 0%,#111 40%,#0d1a00 100%)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,255,0,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,255,0,.03) 1px,transparent 1px);background-size:60px 60px}
 .hero-glow{position:absolute;top:20%;right:10%;width:400px;height:400px;background:radial-gradient(circle,rgba(200,255,0,.08) 0%,transparent 70%);pointer-events:none}
-.hero-content{position:relative;max-width:700px;text-align:center}
+.hero-content{position:relative;max-width:700px;text-align:center;width:100%;padding:0 .5rem}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,255,0,.1);border:1px solid rgba(200,255,0,.2);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:var(--verde);margin-bottom:1.5rem;letter-spacing:.5px}
 .hero-badge::before{content:'●';font-size:8px;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero-titulo{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05;margin-bottom:1rem;letter-spacing:-1px}
+.hero-titulo{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,8vw,4.5rem);line-height:1.05;margin-bottom:1rem;letter-spacing:-1px;word-break:break-word;overflow-wrap:break-word;width:100%}
 .hero-titulo span{color:var(--verde)}
-.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--texto2);margin-bottom:.5rem;line-height:1.6}
-.hero-slogan{font-family:'Syne',sans-serif;font-size:clamp(.9rem,1.5vw,1rem);color:#555;margin-bottom:2.5rem;letter-spacing:1px;text-transform:uppercase}
+.hero-sub{font-size:clamp(.875rem,2vw,1.2rem);color:var(--texto2);margin-bottom:.5rem;line-height:1.6;width:100%}
+.hero-slogan{font-family:'Syne',sans-serif;font-size:clamp(.7rem,1.5vw,1rem);color:#555;margin-bottom:2.5rem;letter-spacing:1px;text-transform:uppercase;width:100%}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-whats{display:inline-flex;align-items:center;gap:10px;background:var(--verde);color:#111;padding:14px 28px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;text-decoration:none;transition:all .2s}
 .btn-whats:hover{background:#d4ff33;transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,255,0,.3)}
 .btn-whats svg{width:20px;height:20px}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--borda);color:var(--texto2);padding:14px 28px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s}
 .btn-outline:hover{border-color:var(--verde);color:var(--verde)}
-.hero-stats{display:flex;gap:3rem;justify-content:center;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--borda)}
-.stat-item{text-align:center}
-.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;color:var(--verde);display:block}
-.stat-lbl{font-size:12px;color:#555;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.hero-stats{display:flex;gap:2rem;justify-content:center;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--borda);flex-wrap:wrap;width:100%}
+.stat-item{text-align:center;flex:1;min-width:70px}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.2rem,4vw,2rem);color:var(--verde);display:block;white-space:nowrap}
+.stat-lbl{font-size:clamp(9px,1.5vw,12px);color:#555;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
 
 /* SECTIONS */
 section{padding:5rem 2rem}
@@ -161,17 +161,19 @@ footer{background:var(--preto2);border-top:1px solid var(--borda);padding:3rem 2
   .nav-links{display:none}
   .nav-menu{display:block}
   nav{padding:0 1rem}
-  .hero{padding:80px 1.25rem 3rem}
-  .hero-titulo{font-size:2.2rem;letter-spacing:-.5px}
-  .hero-sub{font-size:.95rem}
-  .hero-slogan{font-size:.8rem}
+  .hero{padding:80px 1.25rem 3rem;overflow:hidden}
+  .hero-content{width:100%;padding:0}
+  .hero-titulo{font-size:1.9rem;letter-spacing:-.3px;word-break:break-word;overflow-wrap:break-word}
+  .hero-sub{font-size:.9rem}
+  .hero-slogan{font-size:.75rem;letter-spacing:.5px}
   .hero-btns{flex-direction:column;align-items:stretch}
-  .btn-whats,.btn-outline{justify-content:center;text-align:center}
-  .hero-stats{gap:1.25rem;padding-top:2rem;margin-top:2.5rem}
-  .stat-num{font-size:1.4rem}
-  .stat-lbl{font-size:10px}
-  section{padding:3.5rem 1.25rem}
-  .section-titulo{font-size:1.7rem}
+  .btn-whats,.btn-outline{justify-content:center;text-align:center;width:100%}
+  .hero-stats{gap:.75rem;padding-top:1.5rem;margin-top:2rem;flex-wrap:wrap}
+  .stat-item{flex:1;min-width:80px}
+  .stat-num{font-size:1.1rem}
+  .stat-lbl{font-size:9px}
+  section{padding:3rem 1.25rem}
+  .section-titulo{font-size:1.6rem;overflow-wrap:break-word}
   .dif-grid{grid-template-columns:1fr 1fr;gap:1rem}
   .servicos-grid{grid-template-columns:1fr}
   .processo-steps{grid-template-columns:1fr 1fr;gap:1.5rem}
@@ -179,12 +181,13 @@ footer{background:var(--preto2);border-top:1px solid var(--borda);padding:3rem 2
   .footer-grid{grid-template-columns:1fr;gap:2rem}
   .cta-info{gap:.75rem;flex-direction:column;align-items:center}
   .footer-bottom{flex-direction:column;text-align:center}
-  .hero-badge{font-size:11px;padding:5px 12px}
+  .hero-badge{font-size:10px;padding:5px 10px}
   .whats-float{bottom:1.25rem;right:1.25rem;width:50px;height:50px}
   .whats-float svg{width:24px;height:24px}
-  .cta-final .section-titulo{font-size:1.8rem}
-  .btn-whats{font-size:14px;padding:13px 20px}
-  .galeria-instagram{padding:1.25rem}
+  .cta-final .section-titulo{font-size:1.6rem}
+  .btn-whats{font-size:13px;padding:12px 16px}
+  .galeria-instagram{padding:1rem}
+  .container{padding:0}
 }
 </style>
 </head>
